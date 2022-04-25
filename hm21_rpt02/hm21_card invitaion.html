@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm21 : X-Mas Card</title>
+		<style>
+			img{
+				margin-top: 15px;
+				margin-left: 30px;
+			}
+			 audio{
+				display: inline-block;
+				position: absolute;
+				height: 30px;
+				width: 250px;
+				left: -15px;
+				top: 468px;
+
+			}
+		
+			div {
+				display: inline-block;
+				position: absolute; /* 절대 배치 */
+				border: 50px solid transparent;
+           	 	width: 550px;
+            	height: 500px;
+            	
+			}
+			div > p {
+				display: inline-block; /* div의 자식 p */
+				position: absolute; /* 절대 배치 */
+				height: 40px;
+				width: 30px;
+				font-size: 30px;
+				white-space: nowrap;
+			}
+
+			#backimg {
+            	position: absolute;
+           	 	height: 600px;
+            	width: 630px;
+            	left: -70px;
+            	top: -63.5px;
+				opacity: 0.4;
+				z-index: -1;
+        	}
+			@keyframes movemove{
+				0% { transform: rotate(15deg);}
+				50% { transform: rotate(-15deg)}
+				100% { transform: rotate(15deg)}
+			}
+
+			@keyframes movemove2{
+				0% { margin-top: 20px;}
+				50% { margin-top: 40px;}
+				100% { margin-top: 20px;}
+			}
+
+			#tree0{
+				position: absolute;
+				height: 51px;
+            	width: 145px;
+            	left: 170px;
+            	top: 115px;
+			}
+
+			#tree01{
+				position: absolute;
+				height: 95px;
+            	width: 270px;
+            	left: 110px;
+            	top: 200px;
+			}
+			#tree02{
+				position: absolute;
+				height: 130px;
+            	width: 370px;
+            	left: 60px;
+            	top: 280px;
+			}
+
+			#fixed {
+				position: fixed;
+				top: 72.5px;
+				left: 50px;
+				width: 100px;
+				padding: 5px;
+				background: red;
+				color: white;
+			}
+			#fixed2 {
+				position: fixed;
+				top: 445px;
+				left: 400px;
+				width: 50px;
+				padding: 2px;
+				background: yellow;
+				color: black;
+			}
+
+			@keyframes textColorAnimation {
+			0% { color : red;  }
+			16% { color: orange; }
+			33% { color : yellow; }
+			48% { color: green; }
+			65% { color : yellow; }
+			82% { color : orange; }
+			100% { color : red; }
+			}
+			span {
+				animation-name: textColorAnimation;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes textColorAnimation2 {
+			0% { color: orange; }
+			16% { color : yellow; }
+			33% { color: green; }
+			48% { color : blue; }
+			65% { color : green; }
+			82% { color : yellow; }
+			100% { color : orange;  }
+			}
+			span#text2 {
+				animation-name: textColorAnimation2;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes textColorAnimation3 {
+			0% { color : yellow; }
+			16% { color: green; }
+			33% { color : blue; }
+			48% { color : indianred; }
+			65% { color : blue; }
+			82% { color : green;  }
+			100% { color: yellow; }
+			}
+			span#text3 {
+				animation-name: textColorAnimation3;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes textColorAnimation4 {		
+			0% { color: green; }
+			16% { color : blue; }
+			33% { color : indianred; }
+			48% { color : purple; }
+			65% { color : indianred;  }
+			82% { color: blue; }
+			100% { color : green; }
+			}
+			span#text4 {
+				animation-name: textColorAnimation4;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes textColorAnimation5 {
+			0% { color : blue; }
+			16% { color : indianred; }
+			33% { color : purple; }
+			48% { color : red;  }
+			65% { color: purple; }
+			82% { color : indianred; }
+			100% { color: blue; }
+			}
+			span#text5 {
+				animation-name: textColorAnimation5;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes textColorAnimation6 {
+			0% { color : indianred; }
+			16% { color : purple; }
+			33% { color : red;  }
+			48% { color: orange; }
+			65% { color : red; }
+			82% { color: purple; }
+			100% { color : indianred; }
+			}
+			span#text6 {
+				animation-name: textColorAnimation6;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes textColorAnimation7 {			
+			0% { color : purple; }
+			16% { color : red;  }
+			33% { color: orange; }
+			48% { color : yellow; }
+			65% { color: orange; }
+			82% { color : red; }
+			100% { color : purple; }
+			}
+			span#text7 {
+				animation-name: textColorAnimation7;
+				animation-duration: 7s;
+				animation-iteration-count: infinite;
+			}
+			.multiEffect {
+				color: yellow;
+				text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+			}
+			.blurText {
+				text-shadow: 3px 3px 5px black;
+			}
+
+			#upup1{
+				animation: movemove2 1.5s infinite;
+			}
+			#upup1:hover{
+				transform: translate(-10px, -10px);	
+			}
+			#upup2{
+				animation: movemove2 1.51s infinite;
+			}
+			#upup2:hover{
+				transform: translate(-10px, -10px);	
+			}
+			#upup3{
+				animation: movemove2 1.52s infinite;
+			}
+			#upup3:hover{
+				transform: translate(-10px, -10px);	
+			}
+			#upup4{
+				animation: movemove2 1.53s infinite;
+			}
+			#upup4:hover{
+				transform: translate(-10px, -10px);	
+			}
+
+			#upup5{
+				animation: movemove2 1.54s infinite;
+			}
+			#upup5:hover {
+				transform: translate(10px, -10px);
+			}
+
+			#upup6{
+				animation: movemove2 1.55s infinite;
+			}
+			#upup6:hover {
+				transform: translate(10px, -10px);
+			}
+
+			#upup7{
+				animation: movemove2 1.56s infinite;
+			}
+			#upup7:hover {
+				transform: translate(10px, -10px);
+			}
+
+			#upup8{
+				animation: movemove2 1.57s infinite;
+			}
+			#upup8:hover {
+				transform: translate(10px, -10px);
+			}
+
+			#upup9{
+				animation: movemove2 1.58s infinite;
+			}
+			#upup9:hover {
+				transform: translate(-10px, -10px);
+			}
+			#upup10{
+				animation: movemove2 1.59s infinite;
+			}
+			#upup10:hover {
+				transform: translate(-10px, -10px);
+			}
+
+			#upup{
+				border-radius: 20px 0px 20px 0px;
+			}
+
+			#upup:hover {
+				transform: translate(-10px, -10px);			
+			}
+
+			#chris:hover{
+				background-image: url(media/chris.jpg);			
+				width: 300px;
+				height: 150px;
+				transform: translate(10px,-50px);
+			}
+			@keyframes movemove3{
+				0% { margin-left: 0px;}
+				50% { margin-left: 20px;}
+				100% { margin-left: 0px;}
+			}
+			h2:hover{
+				animation: movemove3 1s infinite;
+			}
+			#gogo{
+				transition: font-size 2s;
+			}
+			#gogo:hover{
+				font-size: 115%;
+			}
+			table {
+				position: relative;
+				top: 580px;
+				left: 230px;
+       		 	border-collapse: collapse;
+        	}
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h2 class="multiEffect">Merry Christmas!</h2>
+		<hr>
+		<div style="border-image: url(media/a.gif) 75 round;">
+		<img id="backimg" src="media/snow2.gif" alt="트리배경">
+		<img src="media/christmastree.png" width="490" height="450" alt="크리스마스 트리">	
+		<img id="tree0" src="media/트리장식0.png" alt="트리불빛">
+		<img id="tree01" src="media/트리장식01.png" alt="트리불빛2">
+		<img id="tree02" src="media/트리장식02.png" alt="트리불빛3">
+		
+
+		<p id="chris" style="left: 240px; top:2px;">
+			　　
+		</p>
+        <p id="upup1" style="left: 180px; top: 60px; background: aqua;">
+           <span>M</span> 
+        </p>
+        <p id="upup2" style="left: 220px; top: 90px; background: red;">
+            <span id="text2">E</span> 
+        </p>
+        <p id="upup3" style="left: 260px; top: 120px; background: lightcoral;">
+            <span id="text3">R</span> 
+        </p>
+        <p id="upup4" style="left: 300px; top: 150px; background: chartreuse;">
+            <span id="text4">R</span> 
+        </p>
+        <p id="upup5" style="left: 340px; top: 180px; background: yellow;">
+            <span id="text5">Y</span> 
+        </p>
+        <p id="upup6" style="Left: 300px; top: 220px; background: ivory;">
+            <span id="text6">X</span> 
+        </p>
+        <p id="upup7" style="Left: 260px; top: 240px; background: burlywood;">
+            <span id="text7">&nbsp-</span> 
+        </p>
+        <p id="upup8" style="Left: 220px; top: 270px; background: cornflowerblue;">
+            <span>M</span> 
+        </p>
+        <p id="upup9" style="Left: 180px; top: 300px; background: skyblue;">
+            <span id="text2">A</span> 
+        </p>
+        <p id="upup10" style="Left: 220px; top: 350px; background: magenta;">
+            <span id="text3">S</span> 
+        </p>
+		<audio src="media/happytown.mp3" controls autoplay loop></audio>
+		
+		<p style="left: -10px; top: -8px; font-size: 12px; color: magenta;">
+			<strong><gogo id="gogo">마우스를 별위에 올리면 사진이 나타납니다.</gogo></strong>
+		</p>
+		<p id="upup" class="blurText" style="width: 170px; left: 382px; top: 430px; font-size: 20pt; font-style: oblique; background: #BCC3EC; color: whitesmoke;">
+			HM21 정희철 
+		</p>
+
+	</div>
+	
+	<hr style="position: relative; top: 600px; width: 900px;">
+	<p class="multiEffect3" style="font-size: 15pt; text-align: center; position: relative; top: 580px;"><strong>크리스마스 파티에 초대된 것을 환영합니다!!</strong></p>
+	<table>
+		<thead>
+			<tr><th class="blurTextss" style="color: black; text-align: right;">파티 입장시 크리스마스</th><th th class="blurTextss" style="color: black; text-align: left;">초대장을 보여주세요.</th></tr>
+			<br>
+		</thead>
+		<tbody>
+			<tr><th>날짜</th><th>2021년 12월 25일</th></tr>
+			<tr><th>장소</th><th>인제대학교 운동장</th></tr>
+			<tr><th>시간</th><th>오후 6시</th></tr>
+			<tr><th>준비물</th><th>초대장</th></tr>
+			<tr><th>dress code</th><th><a style="color: Red;">Red</a>,<a style="color: green;">Green </a>,<a style="color: blue;">Blue</a></th></tr>
+		</tbody>
+	</table>
+	<hr style="position: relative; top: 600px; width: 900px;">
+	</body>
+
+</html>

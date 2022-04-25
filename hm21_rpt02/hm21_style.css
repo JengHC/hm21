@@ -1,0 +1,18 @@
+.multiEffect {
+    color: white;
+    text-shadow: 2px 2px 2px black, 0 0 25px skyblue, 0 0 5px skyblue;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+details{
+    text-align: center;
+}
+summary{
+    color: #483737;
+}
