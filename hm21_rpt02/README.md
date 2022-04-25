@@ -1,7 +1,7 @@
 ## hm21의 홈페이지 V2
-- Semantic tag로 화면 layout 구성 하였다. header, nav, section, aside, footer 
-- 타이틀을 hm21 : 나는 누구인가? 로 설정하였고 [hm21's Homepage]를 클릭하면 who is hm21? 과 연결된다.<br>
-홈페이지 hm21_rpt02.html 를 실행해도 초기화면은 who is hm21? 이다.
+- Semantic tag로 화면 layout 구성 하였다.
+- 기본화면을 hm21 : 나는 누구인가? 로 설정, [hm21's Homepage]를 클릭하면 who is hm21? 과 연결.
+- 홈페이지 hm21_rpt02.html 를 실행해도 초기화면은 who is hm21? 이다.
 - CSS3 스타일을 응용하여 리스트로 가로 메뉴를 만들었다.
 - 메뉴에 있는 글씨를 클릭하면 홈페이지 중앙부분에 iframe 를 이용하여 메뉴에 있는 내용을 볼수있다.
 - who is hm21? 부분에 li 에 이미지를 넣어서 나타내었다. 각종 애니메이션과 style 이용해서 색상변경함.
