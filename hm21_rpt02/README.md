@@ -27,7 +27,6 @@
 - hm21_UK.html
 - hm21_USA.html
 - hm21_Aust.html
-- hm21_IOT.html
 - hm21_rpt02.html
 - hm21_Eternals.html
 - hm21_timetable.html
