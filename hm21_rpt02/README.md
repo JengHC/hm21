@@ -1,4 +1,4 @@
-## hm21의 홈페이지 V2
+## 홈페이지 설명
 - Semantic tag로 화면 layout 구성 하였다.
 - 기본화면을 hm21 : 나는 누구인가? 로 설정, [hm21's Homepage]를 클릭하면 who is hm21? 과 연결.
 - 홈페이지 hm21_rpt02.html 를 실행해도 초기화면은 who is hm21? 이다.
@@ -14,23 +14,3 @@
 - 애니메이션은 @keyframes 와 animation ,hover, transform, translate, focus 등을 이용해 움직임
 (마우스를 올리면 색상변경, 이동, 커짐 등등)
 - 그림과 음악은 media folder 에 저장하였고 영상은 link로 처리해서 연결
-
-# html 파일 
-- hm21_Travel.html
-- hm21_movie.html
-- hm21_club.html
-- hm21_club_info.html
-- hm21_club_join.html
-- hm21_Avengers.html
-- hm21_day.html
-- hm21_SpiderMan.html
-- hm21_UK.html
-- hm21_USA.html
-- hm21_Aust.html
-- hm21_rpt02.html
-- hm21_Eternals.html
-- hm21_timetable.html
-- hm21_card.html
-- hm21_card_invitation.html
-- hm21_style.css
-> 동호회부분에 css파일 만들어서 style
