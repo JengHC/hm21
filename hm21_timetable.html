@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : timetable </title>
+    <style>
+      * {
+        margin: 0; padding: 0;
+        }
+      body {
+        background: #e1fae0; height: 100%;
+        }
+      h1 {
+        text-align: center; color:skyblue;
+        }
+      div.box {
+        background: white; width: 700px; height: 600px; margin-left: -350px;
+        position: fixed; top: 75px; left: 50%; box-shadow: 30px 20px #8496B3;
+        }
+      table {
+        border-collapse: collapse;
+        }
+      td, th {
+        text-align: center; padding: 5px; height: 50px; width: 250px;
+        }
+      th:hover{
+        background: skyblue;
+      }
+      thead {
+        background: skyblue;
+        }
+      tbody tr:nth-child(even) {
+        background: azure;
+        }
+      .blurText{
+				text-shadow: -1px 1px 1px black;
+			}
+			.blurText2{
+        color: azure;
+				text-shadow: 0px 1px 4px black;
+			}
+      .multiEffect {
+				color: #525052;
+				text-shadow: 2px 2px 2px white, 0 0 25px white, 0 0 5px white;
+			}
+      a {
+        text-decoration: none;
+				position: absolute; /* 절대 배치 */
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+
+    
+      <br><h1 class="multiEffect" >Time Table</h1>
+      <strong><a href="hm21_day.html" style="color: royalblue; left: 780px; top: 20px;">▶ Daily Life ◀</a></strong>
+    
+      <div class="box">
+        
+        <table>
+          <thead>
+            <tr><th></th><th class="blurText2">월요일</th><th class="blurText2">화요일</th>
+                <th class="blurText2">수요일</th><th class="blurText2">목요일</th><th class="blurText2">금요일</th></tr>
+            
+          </thead>
+          <tbody>
+            <tr><th class="blurText2" style="background-color: skyblue;">1교시</th><th></th><th><br></th><th></th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">2교시</th><th></th><th><br></th><th></th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">3교시</th><th></th><th><br></th><th></th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">4교시</th><th></th><th><br></th><th></th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">5교시</th><th></th><th><br></th><th></th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">6교시</th><th></th><th></th><th>HTML 5</th><th></th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">7교시</th><th></th><th>진로설정과<br>성공취업</th><th>HTML 5</th><th>드론제작운용</th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">8교시</th><th></th><th>진로설정과<br>성공취업</th><th>HTML 5</th><th>드론제작운용</th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">9교시</th><th></th><th></th><th>HTML 5</th><th>드론제작운용</th><th></th></tr>
+            <tr><th class="blurText2" style="background-color: skyblue;">10교시</th><th></th><th></th><th></th><th>드론제작운용</th><th></th></tr>
+          </tbody>
+          
+        </table>
+      </div>
+     
+  </body>
+</html>
