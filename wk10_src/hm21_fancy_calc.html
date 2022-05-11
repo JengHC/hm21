@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : Javascript</title>
+    <style>
+      html{
+        background: aliceblue;
+      }
+      hr{
+        width: 400px;
+      }
+      input {
+        padding: 9px;
+        display: inline;
+        margin-top: 4px;
+        font-size: 19px;
+        background-color: #ffffff;
+      }
+      input#display {
+        color: black;
+        background-color: skyblue;
+        font-size: 19px;
+        text-align: right;
+      }
+      input#sin1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #sin1:hover{
+        background: chartreuse;
+      }
+      input#cos1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #cos1:hover{
+        background: chartreuse;
+      }
+      input#tan1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #tan1:hover{
+        background: chartreuse;
+      }
+      input#clear{
+        width: 86.5px;
+        background: aquamarine;
+      }
+      #clear:hover{
+        background: chartreuse;
+      }
+      input#squ{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #squ:hover{
+        background: chartreuse;
+      }
+      input#qub{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #qub:hover{
+        background: chartreuse;
+      }
+      input#sqr2{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #sqr2:hover{
+        background: chartreuse;
+      }
+      input#sqr3{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #sqr3:hover{
+        background: chartreuse;
+      }
+      input#a1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #a1:hover{
+        background: chartreuse;
+      }
+      input#a2{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #a2:hover{
+        background: chartreuse;
+      }
+      input#a3{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #a3:hover{
+        background: chartreuse;
+      }
+      input#a4{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #a4:hover{
+        background: chartreuse;
+      }
+      input#b1{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #b1:hover{
+        background: chartreuse;
+      }
+      input#b2{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #b2:hover{
+        background: chartreuse;
+      }
+      input#b3{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #b3:hover{
+        background: chartreuse;
+      }
+      input#b4{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #b4:hover{
+        background: chartreuse;
+      }
+      input#c1{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #c1:hover{
+        background: chartreuse;
+      }
+      input#c2{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #c2:hover{
+        background: chartreuse;
+      }
+      input#c3{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #c3:hover{
+        background: chartreuse;
+      }
+      input#c4{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #c4:hover{
+        background: chartreuse;
+      }
+      input#d1{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #d1:hover{
+        background: chartreuse;
+      }
+      input#d2{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #d2:hover{
+        background: chartreuse;
+      }
+      input#d3{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #d3:hover{
+        background: chartreuse;
+      }
+      input#d4{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #d4:hover{
+        background: chartreuse;
+      }
+      input#e1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #e1:hover{
+        background: chartreuse;
+      }
+      input#e2{
+        width: 86.5px;
+        background: #53f195;
+      }
+      #e2:hover{
+        background: chartreuse;
+      }
+      input#e3{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #e3:hover{
+        background: chartreuse;
+      }
+      input#e4{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #e4:hover{
+        background: chartreuse;
+      }
+      input#f1{
+        width: 86.5px;
+        background: #f3ff82;
+      }
+      #f1:hover{
+        background: chartreuse;
+      }
+
+
+      input#del2 {
+        background-color: #f1aaaa;
+        width: 84px;
+      }
+      #del2:hover{
+        background: chartreuse;
+      }
+      input#enter {
+        background-color: #fac9e0;
+        width: 269px;
+      }
+      #enter:hover{
+        background: chartreuse;
+      }
+			.multiEffect {
+				color: white;
+				text-shadow: 2px 2px 2px black, 0 0 25px skyblue, 0 0 5px skyblue;
+			}
+    </style>
+    <script>
+      var expression = "";
+
+      function add(character) {
+        expression = expression + character;
+
+        document.getElementById("display").value = expression;
+      }
+
+      function del() {
+        expression = expression.substring(0, expression.length - 1);
+        document.getElementById("display").value = expression;
+      }
+
+      function compute() {
+        var expression_num = parseFloat(eval(expression));
+        if (isInteger(expression_num) == true) {
+          expression = expression_num;
+        } else {
+          expression = expression_num;
+        }
+        document.getElementById("display").value = expression;
+      }
+
+      function clearDisplay() {
+        expression = "";
+        document.getElementById("display").value = "0";
+      }
+
+      function isInteger(x) {
+        return Math.floor(x) === x;
+      }
+      function sin(){
+			  document.calculator.result.value=Math.sin(document.calculator.result.value);
+		  }
+		  function cos(){
+			  document.calculator.result.value=Math.cos(document.calculator.result.value);
+		  }
+		  function tan(){
+			  document.calculator.result.value=Math.tan(document.calculator.result.value);
+		  }
+      function square(){
+			  document.calculator.result.value = Math.pow(document.calculator.result.value,2);
+		  }
+		  function qubbed(){
+			  document.calculator.result.value = Math.pow(document.calculator.result.value,3);
+		  }
+		  function sqrt2(){
+			  document.calculator.result.value = Math.pow(document.calculator.result.value,1/2);
+		  }
+		  function sqrt3(){
+			  document.calculator.result.value = Math.pow(document.calculator.result.value,1/3);
+		  }
+      function jin2(){
+        var i2 = document.getElementById("display").value;
+        document.calculator.result.value = parseInt(i2).toString(2);
+ 
+      }
+      function jin8(){
+        var i8 = document.getElementById("display").value;
+        document.calculator.result.value = parseInt(i8).toString(8);
+ 
+      }
+
+      function jin16(){
+        var i16 = document.getElementById("display").value;
+        document.calculator.result.value = parseInt(i16).toString(16);
+ 
+      }
+
+      
+
+      
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <div align="center">
+      <h1 class="multiEffect" style="color: white;">hm21's JS calculator</h1>
+      <hr />
+      <form name="calculator">
+        <input id="display" value="0" size="21" name="result" placeholder="0" />
+        <input id="del2" type="button" value="&larr;" onclick="del()" />
+        <br />
+        <input id="sin1" type="button" value="sin" onclick="sin()" />
+        <input id="cos1" type="button" value="cos" onclick="cos()" />
+        <input id="tan1" type="button" value="tan" onclick="tan()" />
+        <input id="clear" type="button" value="Clear" onclick="clearDisplay()" />
+        <br />
+        <input id="squ" type="button" value="x&sup2;" onclick="square()" />
+        <input id="qub" type="button" value="x&sup3;" onclick="qubbed()" />
+        <input id="sqr2" type="button" value="&radic;" onclick="sqrt2()" />
+        <input id="sqr3" type="button" value="&#8731;" onclick="sqrt3()" />
+        <br />
+        <input id="a1" type="button" value="/" onclick="add('/')" />
+        <input id="a2" type="button" value="*" onclick="add('*')" />
+        <input id="a3" type="button" value="-" onclick="add('-')" />
+        <input id="a4" type="button" value="%" onclick="add('%')" />
+        <br />
+        <input id="b1" type="button" value="7" onclick="add('7')" />
+        <input id="b2" type="button" value="8" onclick="add('8')" />
+        <input id="b3" type="button" value="9" onclick="add('9')" />
+        <input id="b4" type="button" value="+" onclick="add('+')" />
+        <br />
+        <input id="c1" type="button" value="4" onclick="add('4')" />
+        <input id="c2" type="button" value="5" onclick="add('5')" />
+        <input id="c3" type="button" value="6" onclick="add('6')" />
+        <input id="c4" type="button" value="BIN" onclick="jin2()" />
+        <br />
+        <input id="d1" type="button" value="1" onclick="add('1')" />
+        <input id="d2" type="button" value="2" onclick="add('2')" />
+        <input id="d3" type="button" value="3" onclick="add('3')" />
+        <input id="d4" type="button" value="OCT" onclick="jin8()" />
+        <br />
+        <input id="e1" type="button" value="(" onclick="add('(')" />
+        <input id="e2" type="button" value="0" onclick="add('0')" />
+        <input id="e3" type="button" value="." onclick="add('.')" />
+        <input id="e4" type="button" value="HEX" onclick="jin16()" />
+        <br />
+        <input id="f1" type="button" value=")" onclick="add(')')" />
+        <input id="enter" type="button" value="Enter" name="enter" onclick="compute()" />      
+        <br />   
+      </form>
+      <h3 style="color: royalblue;">COMSI, hm21</h3>
+    </div>
+  </body>
+</html>
