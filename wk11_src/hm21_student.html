@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : Javascript-student.html</title>
+    <style>
+      a{
+        font-size: 14pt;
+        color: rgb(95, 6, 6);
+      }
+      strong{
+        font-size: 14pt;
+        color:royalblue;
+      }
+    html{
+      background-color: aliceblue;
+    }
+      a{
+        text-decoration: none;
+      }
+      .multiEffect {
+			color: whitesmoke;
+			text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+		}
+    </style>
+    <script>
+        var now = new Date();
+        var student = {
+            id: "hm21",
+            name: "JeongHeeCheol",
+            Age: function() {
+              return now.getFullYear() - this.brithyear + 1;
+            },
+            phone: "010-66**-28**",
+            adress: "Ulsan",
+            link: "https://github.com/JengHC/hm21",
+            brithyear: 1998,
+            brithmonth: 11,
+            brithday: 12,
+            year: function(){
+              return student.Age()+7;
+            },
+            year2: function(){
+              return now.getFullYear() + 7;
+            },
+            season:"Spring, Autumn",
+            bloodtype:"B type"
+        };
+    </script>
+  </head>
+  <a href=""></a>
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h2 class="multiEffect">student 객체를 리터럴 표기 방식으로 작성하기</h2>
+    <hr />
+    <script>
+        document.write("<a>"+"student's id is " +"</a>"+ "<strong>" + student.id + "</strong>" + "<br>");
+        document.write("<a>"+"student's name is " +"</a>"+ "<strong>" + student.name + "</strong>" + "<br>");
+        document.write("<a>"+"student's age is " +"</a>"+ "<strong>" + student.Age() + "</strong>" +"<br>");
+        document.write("<a>"+"student's phone is " +"</a>"+ "<strong>" + student.phone + "</strong>" + "<br>");
+        document.write("<a>"+"student's adress is " +"</a>"+ "<strong>" + student.adress + "</strong>" + "<br>");
+        document.write("<a>"+"student's link is " +"</a>"+ "<strong>" + "<a style="+"color:purple" +" href= "+ "https://github.com/JengHC/hm21>" +student.link + "</a>" +"</strong>" + "<br>");
+        document.write("<a>"+"student's brithday is " +"</a>"+ "<strong>" +student.brithyear +" / " +student.brithmonth +" / " +student.brithday + "</strong>" + "<br>");
+        
+        document.write("<a>"+"student's favorite season is " +"</a>"+ "<strong>" + student.season + "</strong>" + "<br>");
+        document.write("<a>"+"student's blood type is " +"</a>"+ "<strong>" + student.bloodtype + "</strong>" + "<br>");
+
+        document.write("<strong>" + student.year2() + "</strong>" + "<a>"+" student's age is " +"</a>" + "<strong>" + student.year() + "</strong>" +"<br>");
+
+
+    </script>
+  </body>
+</html>
