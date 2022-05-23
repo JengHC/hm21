@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : Javascript object - Prototype</title>
+    <style></style>
+    <script>
+      // 프로토타입 Student 객체 작성
+      function Student(name, score) { 
+	  this.univ = "인제대학"; // this.univ을 이용하여 univ 프로퍼티 작성
+	  this.name = name; // this.name을 이용하여 name 프로퍼티 작성
+	  this.score = score; // this.score를 이용하여 score 프로퍼티 작성
+	  this.getGrade = function () { // getGrade() 메소드 작성
+			if(this.score > 80) return "A";
+			else if(this.score > 60) return "B";
+			else return "F";
+	    }
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>프로토타입으로 사용자 객체 만들기</h3>
+    <hr />
+    <script>
+    var kitae = new Student("황기태", 75); 		// Student 객체 생성
+    var jaemoon = new Student("이재문", 93);	// Student 객체 생성
+    document.write(kitae.univ + ", " + kitae.name + "의 학점은 " + kitae.getGrade() + "<br>");
+    document.write(jaemoon.univ + ", " + jaemoon.name + "의 학점은 " + jaemoon.getGrade() + "<br>")
+    </script>
+    
+  </body>
+</html>
