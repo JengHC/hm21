@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+
+<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>hm21 : 나는 누구인가?</title>
+    <style>
+
+        html,
+        body {
+            width: 100%;
+			height: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        iframe{
+            border: 0;
+        }
+        a{
+			text-decoration: none;
+		}
+
+        .header {
+            text-align: center;
+            padding-top: 1px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8%;
+            background: #e1fae0;
+        }
+
+        .nav {
+            width: 20%;
+            height: 82%;
+            float: right;
+            background: #e1fae0;
+        }
+
+        .section {
+            width: 49%;
+            height: 82%;
+            float: right;
+            background: #e1fae0;
+        }
+        .iframebox{
+            position: relative;
+            width: 100%;
+            padding-bottom: 82%;
+        }
+        .iframebox iframe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .aside {
+            width: 31%;
+            height: 82%;
+            float: left;
+            background: #e1fae0;
+           
+        }
+
+        .footer {
+            position: fixed;
+            width: 100%;
+            height: 8%;
+            clear: both;
+            background: #e1fae0;
+            bottom: 0; 
+        }
+        #left{
+			text-align: center;
+			height: 35px;
+            background: #e1fae0;
+        }
+        #left ul{
+            margin:0;
+            padding: 0;
+            width:100%;
+        }
+        #left ul li{
+            display: inline;
+            list-style-type:none;
+            padding:0px 15px;
+        }
+        #left ul li a{
+			font-size: 14pt;
+            color:black;
+            text-decoration:none
+        }
+        #left ul li a:hover{
+            color: yellow;
+        }
+        .multiEffect {
+			color: #525050;
+			text-shadow: 2px 2px 2px black, 0 0 25px pink, 0 0 5px white;
+		}
+        .multiEffect2 {
+			color: #525050;
+			text-shadow: 2px 2px 4px #525050, 0 0 25px skyblue, 0 0 10px white;
+		}
+        .multiEffect3 {
+			color: #525050;
+			text-shadow: 2px 2px 4px white, 0 0 25px white, 0 0 10px white;
+		}
+        .multiEffect4 {
+			color: #525050;
+			text-shadow: 2px 2px 4px white, 0 0 25px white, 0 0 10px white;
+		}
+        .multiEffect5{
+            color: #525050;
+            text-shadow: 2px 2px 4px white, 0 0 25px white, 0 0 10px white;
+        }
+		.blurText{
+			text-shadow: 3px 3px 5px black;
+		}
+        #hm21{
+			transform: translate(35px, -14px);
+        }
+        input{
+            color: green;
+        }
+        input:focus{
+            width: 180px;
+        }
+        #clock {
+            position:relative;
+            top: -95px;
+            right: 21px;
+            text-align: right;
+            font-size:2em;
+            color:#180544;
+        }
+        #clock2 {
+            position:relative;
+            top: -95px;
+            right: 20px;
+            text-align: right;
+            font-size:1em;
+            color:#180544;
+        }
+
+
+    </style>
+    <script>
+    function star1() {
+        var stars = confirm("HM21's 의 Github로 이동하시겠습니까?");
+        return stars;
+    }
+    function star2() {
+        var stars = confirm("HTML5 강의자료 홈페이지로 이동하시겠습니까?");
+        return stars;
+    }
+    function star3() {
+        var stars = confirm("Youtube 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star4() {
+        var stars = confirm("네이버뉴스 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star5() {
+        var stars = confirm("게임 인벤 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star6() {
+        var stars = confirm("인제정보시스템 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star7() {
+        var stars = confirm("Instagram 로 이동하시겠습니까?");
+        return stars;
+    }
+    function star8() {
+        var stars = confirm("Netfilx 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star9() {
+        var stars = confirm("주식 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star10() {
+        var stars = confirm("쿠팡 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    function star11() {
+        var stars = confirm("Apple 사이트로 이동하시겠습니까?");
+        return stars;
+    }
+    
+    var week = new Array('일', '월', '화', '수', '목', '금', '토');
+    var today = new Date();
+
+
+    function hm21nowtime(){
+		  var month,date,hours,minutes, seconds, ap,year,day;
+		  var intDate,intMon,intHours,intMinutes,intSeconds;
+		  var today=new Date();  
+          intYear = today.getFullYear();
+		  intDate = today.getDate();
+		  intMon = today.getMonth()+1;
+          intDay = today.getDay();
+		  intHours = today.getHours();
+		  intMinutes = today.getMinutes();
+		  intSeconds = today.getSeconds();  
+		  if(intMon < 10){ month = "0" + intMon; } 
+		  else { month = intMon; }
+		  if(intDate < 10){ date = "0" + intDate; } 
+		  else { date = intDate; }
+		  if (intHours == 0) { hours = "12:"; ap = "AM "; }
+		  
+		  else if (intHours < 12) { hours = intHours + ":"; ap = "AM "; } 
+		  else { intHours = (intHours - 12); hours =""+ intHours + ":"; ap = "PM "; }
+		  if (intMinutes < 10){ minutes = "0" + intMinutes + ":"; }
+		  else{ minutes = intMinutes + ":"; }
+		  if (intSeconds < 10){ seconds = "0" + intSeconds; }
+		  else{ seconds = intSeconds; }  
+		  document.getElementById("clock").innerHTML = ap+ hours + minutes + seconds;
+          document.getElementById("clock2").innerHTML=hm21day.year()+"년 " + hm21day.month()+"월 "+hm21day.date()+"일"+" "+week[today.getDay()] + "요일";
+		  window.setTimeout("hm21nowtime()",1000);
+		  }
+		  window.onload=hm21nowtime
+
+          var hm21day = {
+
+            year: function() {
+              return today.getFullYear();
+            },
+            month: function() {
+              return today.getMonth() + 1;
+            },
+            date: function() {
+              return today.getDate();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    
+    <header class="header">
+        <h1><a class="multiEffect" href="hm21_info2.html" target="myframe">[ HM21's Homepage ] </a></h1>
+    </header>
+    <nav id="left">
+        <ul>
+            <li><a class="blurText" href="hm21_info2.html" target="myframe">Who is hm21?</a></li>
+            <li><a class="blurText" href="hm21_day.html" target="myframe">hm21's Daily Life</a></li>
+            <li><a class="blurText" href="hm21_movie.html" target="myframe">Movie</a></li>
+            <li><a class="blurText" href="hm21_Travel.html" target="myframe">Travel</a></li>
+            <li><a class="blurText" href="hm21_club.html" target="myframe">동호회 모집 안내</a></li>
+            <li><a class="blurText" href="hm21_card.html" target="myframe">X-Mas card</a></li>
+            <li><a class="blurText" href="hm21_card invitaion.html" target="myframe">파티 초대장</a></li>													
+            <li><a class="blurText" href="hm21_fancy_calc.html" target="myframe">HM21's Calculator</a></li>													
+        </ul>
+</nav>
+    <nav class="nav">
+        <p class="multiEffect2" style="font-size: 17pt; text-align: center;">즐겨찾는 사이트</p>
+        <a onclick="return star1();" class="multiEffect3" href="https://github.com/JengHC/hm21" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>① hm21's Github</strong></a><br><br>
+        <a onclick="return star2();"class="multiEffect3" href="https://github.com/redwoods/html5" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>② HTML5 강의실</strong></a><br><br>
+        <a onclick="return star3();"class="multiEffect3" href="https://www.youtube.com/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>③ Youtube</strong></a><br><br>
+        <a onclick="return star4();"class="multiEffect3" href="https://news.naver.com/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>④ 네이버뉴스</strong></a><br><br>
+        <a onclick="return star5();"class="multiEffect3" href="https://www.inven.co.kr/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑤ 게임 인벤</strong></a><br><br>
+        <a onclick="return star6();"class="multiEffect3" href="https://stud.inje.ac.kr/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑥ 인제정보시스템</strong></a><br><br>
+        <a onclick="return star7();"class="multiEffect3" href="https://www.instagram.com/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑦ Instagram</strong></a><br><br>
+        <a onclick="return star8();"class="multiEffect3" href="https://www.netflix.com/kr/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑧ Netflix</strong></a><br><br>
+        <a onclick="return star9();"class="multiEffect3" href="https://finance.naver.com/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑨ 주식</strong></a><br><br>
+        <a onclick="return star10();"class="multiEffect3" href="https://www.coupang.com/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑩ 쿠팡</strong></a><br><br>
+        <a onclick="return star11();"class="multiEffect3" href="https://www.apple.com/kr/" target="_blank" style="font-size: 12pt; margin-left: 60px;"><strong>⑪ Apple</strong></a><br><br>
+    </nav>
+    <section class="section">
+        <article>	
+            <div class="iframebox">
+            <iframe src="hm21_info2.html" name="myframe" allowfullscreen> <!--width="850" height="757"-->
+            </iframe>
+            </div>		
+        </article>
+    </section>
+
+    <aside class="aside">
+        <div style=" background-color: #e1fae0; padding: 1px; width:350px;">
+            <p class="multiEffect4" style="text-align: center;"><strong>HomePage Login</strong></p>
+        </div>
+        <form>
+            <p class="multiEffect4" style="text-align: center; width: 350px;">
+                <strong>You are a Member of Hm21's HomePage.</strong>  
+            </p>
+            
+
+            <div style=" background-color: #e1fae0; padding: 1px; width:555px;">
+                <p class="multiEffect4" style="margin-left:111px"><strong>Today weather</strong></p>
+            <!-- <hr margin-left:0; width: 84%;> -->
+            <iframe width="84%" height="700px" src="https://forecast.io/embed/#lat=35.2342&lon=128.8811&name=김해&color=#F6A8A6&font=Arial&units=si"frameborder="0"></iframe>
+            </iframe>
+        </form>
+    </aside>
+
+    <footer class="footer">
+        <div class="inner" >
+            <div id="hm21" class="multiEffect5" style="font-size: 15pt; text-align: left; font-style: italic; display: flex;">
+                <div>hm21<br>20171246 정희철</div>
+                <a href="https://www.naver.com" style="margin-top: -25px;"><img src="./media/banner.jpg" alt="" width="720px" height="80px" style="z-index:9; position: relative;margin-left: 500px;"></a>
+            </div>
+            <div class="inner_clock" style="z-index:1; width: 300px; position:absolute; right: 0;">
+                <strong><div id="clock"></div></strong>
+                <strong><div id="clock2"></div></strong>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

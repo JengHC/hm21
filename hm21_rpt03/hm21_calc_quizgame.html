@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hm21 : quizgame</title>
+    <style>
+        a{
+            text-decoration: none;
+            font-size: 15pt;
+            position: relative;
+            color: rgb(19, 74, 241);
+            left: 350px;
+        }
+        h1{
+            text-align: center;
+        }
+        .multiEffect {
+            color: white;
+            text-shadow: 2px 2px 2px black, 0 0 25px skyblue, 0 0 5px skyblue;
+            }
+    </style>
+    <script>
+      function randomInt() {
+        return Math.floor(Math.random()*9) + 1;
+      }
+    </script>
+</head>
+<body>
+ <div>
+    <h1 class="multiEffect">Quiz Game</h1>
+    <hr />
+    <script>
+      var ques = randomInt() + "*" + randomInt();
+      var user = prompt(ques + " 의 정답은!?", 0);
+      if (user == null) {
+        document.write("<a>Quiz Game을 종료합니다</a>");
+      } else {
+        var ans = eval(ques);
+        if (ans == user)
+          document.write("<a>정답입니다!!!</a>");
+        else document.write("<a>오답입니다ㅠㅠ</a>");
+        document.write("<a>　"+ques + "=" + "<strong>" + ans + "</strong>입니다.<br></a>");
+      }
+    </script>
+        <a style="color: palevioletred; left: 400px; top: 100px;" href="hm21_calc_quizgame.html"><strong>다시하기</strong></a><br>
+        <a style="color: palevioletred; left: 400px; top: 102px;" href="hm21_fancy_calc.html"><strong>돌아가기</strong></a>
+ </div>
+</body>
+</html>

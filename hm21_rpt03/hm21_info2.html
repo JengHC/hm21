@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm21 : info</title>
+		<style>
+			ul{
+				margin-left: 22%;
+				width: 50%;
+				background : #B5F6D2;
+				padding : 10px 10px 10px 50px;
+				/* list-style-position: inside; */ 
+				list-style-image: url("media/marker.png");
+			}
+			
+			ul li{ /* ul의 자손 li */
+				font-size: 15pt;
+				color: #525050;
+				background: #e1fae0;
+				margin-bottom: 5px;
+			}
+			.multiEffect {
+				color: #525050;
+				text-shadow: 2px 2px 2px white, 0 0 25px white, 0 0 5px white;
+			}
+			h1{
+				text-align: center;
+			}
+			span:hover{
+				font-size: 17pt;
+				color:#08BD92;
+			}
+
+		</style>
+		<script>
+			function change(obj, size, color) {
+			obj.style.color = color;
+			obj.style.fontSize = size;
+		}
+		var width = 1;
+      // 테두리 두깨
+      function down(obj) {
+        obj.style.fontStyle = "italic";
+      }
+
+      function up(obj) {
+        obj.style.fontStyle = "normal";
+      }
+
+      function over(obj) {
+        obj.style.borderColor = "#08BD92";
+        // 테두리 폭이 0일 때 색은 보이지 않는다.
+      }
+
+      function out(obj) {
+        obj.style.borderColor = "#08BD92";
+      }
+
+      function wheel(e,obj) {
+        if (e.wheelDelta < 0) {
+          width--;
+          if (width < 0) width = 0;
+
+        } 
+        else width++;
+        obj.style.borderStyle = "ridge";
+        obj.style.borderWidth = width + "px";
+      }
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<br><h1 class="multiEffect"><span2 
+			onmousedown="down(this)" 
+			onmouseup="up(this)" 
+			onmouseover="over(this)" 
+			onmouseout="out(this)" 
+			onwheel="wheel(event,this)"
+			style="display:inline-block">Who is HM21?</span2></h1>
+	   <!-- <hr>  -->
+	 
+		<ul>
+			<strong>
+				<li>이름 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">정희철</span>
+				<li>나이 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">25세</span>
+				<li>학교 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">인제대학교</span>
+				<li>학과 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">컴퓨터시뮬레이션학과</span>
+				<li>학번 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">20171246</span>
+				<li>ID : <span class="HM21" onclick="change(this, '25px', 'royalblue')">JengHC</span>
+				<li>전화번호 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">010-66**-28**</span>
+				<li>주소 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">울산광역시 북구</span>
+				<li>취미 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">게임, 운동, 영화보기</span>
+				</strong>
+		</ul>
+
+	</body>
+
+</html>
+

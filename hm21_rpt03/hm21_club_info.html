@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm21 : details와 summary 태그</title>
+		<style>
+            @import url(hm21_style.css);
+			a{
+                text-decoration: none;
+                color:darkblue;
+            }
+			.wordArtEffect {
+				color: black;
+				text-shadow: 0px 0px 3px greenyellow;
+			}
+			.wordArtEffect2 {
+				color: black;
+				text-shadow: 0px 0px 3px aquamarine;
+			}
+			.wordArtEffect3 {
+				color: black;
+				text-shadow: 0px 0px 3px rgb(202, 115, 245);
+			}
+			span{
+				color: red;
+				text-shadow: 0px 0px 3px whitesmoke;
+			}
+			span:hover{
+				font-size: 110%;
+			}
+		</style>
+		<script>
+        var p;
+function init() { // 문서가 완전히 로드되었을 때 호출
+p = document.getElementById("p");
+p.onmouseover = over; // over()를 onmouseover 리스너로 등록
+p.onmouseout = out; // out()를 onmouseout 리스너로 등록
+}
+function over() {
+p.style.backgroundColor="antiquewhite";
+}
+function out() {
+p.style.backgroundColor="aliceblue";
+}
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h1 class="multiEffect">동호회 정보</h1>
+		<img style="margin-left: 20%;" src="media/메시.png">
+		<br>
+		<p style="text-align: center; font-size: 15pt;"><strong>★ FootBall Club ★</strong></p>
+		<hr style="width: 300px;">
+		<details>				
+			<summary><strong>동호회 소개</strong></summary>
+			<p id="p" class="wordArtEffect">
+				안녕하세요.<br>
+				저희 FootBall Club에 관심을 가져주셔서 감사합니다.<br>
+				저희 클럽은 축구를 좋아하는 사람으로 구성되어있으며, 언제든 누구든 환영합니다.
+				<br>실제 축구 뿐만 아니라 경기관람, 혹은 경기 직관도 함께 하고 있습니다.
+				<br>
+				<span>여러분들의 열정을 보여주세요</span>	
+			</p>
+		</details>
+
+		<details>
+			<summary><strong>가입조건</strong></summary>
+
+			<p class="wordArtEffect2">
+				1. 인제대학교 재학생<br>
+				2. 인성에 문제 없는 분<br>
+				3. 승패 상관없이 열심히 하실분
+				
+			</p>
+		</details>
+
+		<details>
+			<summary><strong>회비</strong></summary>
+			<p class="wordArtEffect3">
+				회비는 <span>월3만원
+				<br>신입회원은 처음 달 <span>월 만원 </span>을 받습니다<br>
+				
+			</p>
+		</details>
+		<br>
+		
+		<p style="text-align: center;"><a href="hm21_club.html">처음으로</a>
+		<a href="hm21_club_join.html"><br>가입하기</a></p>
+	</body>
+
+</html>
+
